@@ -1,0 +1,204 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+<div class="container-fluid contenedor-inicio-carusel">
+  <!-- CARUSEL SERVICIOS -->
+  <div class="row fila-carusel-servicios">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid contenedor-imagenes"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid contenedor-imagenes"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid contenedor-imagenes"></div>
+        </div>
+      </div>
+      <a class="carousel-control-prev btn-circle d-flex justify-content-between" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next btn-circle justify-content-end" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- TITULO NUESTROS SERVICIOS-->
+  <div class="row">
+    <p class="titulo-fila-servicios">Nuestros Servicios</p>
+  </div>
+  <!-- CIRCULOS SERVICIOS -->
+  <div class="row" >
+    <div class="col-6">
+      <div class="row" >
+        <div class="col-4"><div class="circulo-pequeño-servicios">
+          <img src="{% static 'core/img/servicios/biomagnetismo.png' %}" 
+          width="90px" height="90px" style="margin-left: 5px;">
+        </div></div>
+        <div class="col-4"><div class="circulo-pequeño-servicios">
+          <img src="{% static 'core/img/servicios/peluqueria.png' %}" 
+            width="70px" height="70px" style="margin-left: 15px;margin-top: 15px;">
+        </div></div>
+        <div class="col-4"><div class="circulo-pequeño-servicios">
+          <img src="{% static 'core/img/servicios/acupunturas.png' %}" 
+            width="70px" height="70px" style="margin-left: 20px;margin-top: 15px;">
+        </div></div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-4"><div class="circulo-pequeño-servicios">
+          <img src="{% static 'core/img/servicios/facial.png' %}" 
+          width="70px" height="70px" style="margin-left: 15px;margin-top: 15px;">
+        </div></div>
+        <div class="col-4"><div class="circulo-pequeño-servicios">
+          <img src="{% static 'core/img/servicios/podologia.png' %}" 
+          width="70px" height="70px" style="margin-left: 15px;margin-top: 15px;">
+        </div></div>
+        <div class="col-4"><div class="circulo-pequeño-servicios">
+          <img src="{% static 'core/img/servicios/pesas.png' %}" 
+            width="70px" height="70px" style="margin-left: 15px;margin-top: 15px;">
+        </div></div>
+      </div>
+    </div>
+  </div>
+  <!-- TEXTOS CIRCULOS SERVICIOS -->
+  <div class="row fila-texto-servicios" >
+    <div class="col-6">
+      <div class="row" style="text-align: center;">
+        <div class="col-4">BIOMAGNETISMO</div>
+        <div class="col-4">PELUQUERIA</div>
+        <div class="col-4">ACUPUNTURA</div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row" style="text-align: center;" >
+        <div class="col-4">TRATAMIENTO FACIAL</div>
+        <div class="col-4">PODOLOGIA</div>
+        <div class="col-4">ENTRENAMIENTO</div>
+      </div>
+    </div>
+  </div>
+  <!-- BOTON AGENDA AQUI -->
+  <div class="row fila-boton-agenda-aqui">
+    <a href="{% url 'agendar' %}">
+      <button class="boton-agenda-aca">AGENDA AQUI</button>
+    </a>
+  </div>
+  <!-- HAZTE SOCIO -->
+  <div class="row">
+    <img src="{% static 'core/img/serSocio.jpeg' %}" style="margin-right: 10px; margin: 40px 0px 40px 0px; width: 100%;" alt="">
+  </div>
+  <!-- VIDEOS -->
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="col-6">
+      <div class="container" class="video-grande-caja">
+        <iframe width="560" height="315" style="margin-left: 100px;" class="videos-inicio" src="https://serviunion.cl/wp-content/uploads/2022/12/Video-presentacion-Serviunion.cl_.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+      <div class="container" class="video-pequeño-caja">
+        <div class="titulo-video">
+          <p>Video Más reciente</p>
+        </div>
+        <iframe width="460" height="200px" class="videos-inicio" src="https://www.youtube.com/embed/izZfT3hRzRo" title="Cooperativa Unioncoop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div style="color: black; text-align: center;">
+            <a href="https://www.youtube.com/@serviunion384/videos" target="_blank">
+              <button class="boton-video">Ver mas...</button>
+            </a>
+        </div>
+      </div>
+  </div>
+  
+  </div>
+  <div class="col-2"></div>
+  <!-- OFERTA -->
+  <div class="row" style="justify-content: center;">
+    <img src="{% static 'core/img/evaluacion_gratis.jpeg' %}" style="margin-right: 10px; margin: 0px 0px 40px 0px; width: 100%;" alt="">
+    ver mas
+  </div>
+
+  <!-- CONVENIOS TITULO -->
+  <div class="row">
+    <p class="convenios-titulo">Nuestros Convenios</p>
+  </div>
+  <!-- CARUSEL CONVENIOS -->
+  <div class="row">
+    <div id="carouselExampleControls2" class="carousel slide carusel-convenios" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid contenedor-imagenes-convenios">
+            <div class="row">
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2024/06/Mesa-de-trabajo-1@4Logo-Clini-300x300.webp"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2024/06/Logo-Dentimagen-300x300.webp"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2024/06/Logo-Mi-intimidad-300x300.webp"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2021/10/Diseno-sin-titulo-300x300.png"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>  
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2021/09/27654443_1799668896719200_8858676316332112494_n-300x300.png"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2024/04/Mesa-de-trabajo-1@4xConvenio-Funeraria-300x300.webp"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid contenedor-imagenes-convenios">
+            <div class="row">
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2023/10/Open-English-Logo.png"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2021/10/pacific-300x300.jpeg"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2021/10/236982626_235255181937777_1447420637075574101_n.jpg"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2023/04/convenio-hotel-tupa.png"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2023/04/Convenio-vientos-del-sur.png"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+              <div class="col-2"><div class="circulo-pequeño-convenios">
+                <img src="https://serviunion.cl/wp-content/uploads/2021/10/133213046_4162073917154423_191939718397625659_n-300x300.png"
+                 style="width: 100px;height: 100px;border-radius: 50%;">
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev btn-circle d-flex justify-content-between" href="#carouselExampleControls2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next btn-circle justify-content-end" href="#carouselExampleControls2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

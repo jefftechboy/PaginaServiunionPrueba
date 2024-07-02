@@ -1,0 +1,62 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+<h1 style="text-align: center;margin-top: 120px;">NOTICIAS</h1>
+<div class="container contenedor-card-noticias">
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'core/img/noticia1.jpeg' %}" width="300px" height="300px" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'core/img/noticia2.jpeg' %}" width="300px" height="300px" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'core/img/noticias2.jpeg' %}" width="300px" height="300px" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'core/img/noticias2.jpeg' %}" width="300px" height="300px" alt="">                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'core/img/noticias2.jpeg' %}" width="300px" height="300px" alt="">                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'core/img/noticias2.jpeg' %}" width="300px" height="300px" alt="">                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="pagination paginador">
+            <a href="#" class="page-link">&laquo;</a>
+            <a href="#" class="page-link">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link">4</a>
+            <a href="#" class="page-link">&raquo;</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

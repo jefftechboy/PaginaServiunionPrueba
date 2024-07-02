@@ -1,0 +1,122 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+  <div class="container-fluid " style="margin-top: 100px; padding-left: 200px;">
+    <div class="row">
+      <div class="col-5">
+        <div class="calendar">
+          <div class="header">
+            <div class="month"></div>
+            <div class="btns">
+              <div class="btn today-btn">
+                <i class="fas fa-calendar-day"></i>
+              </div>
+              <div class="btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+              <div class="btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="weekdays">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+          </div>
+          <div class="days">
+            <!-- lets add days using js -->
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="row">
+          <select class="dropdown  seleccion">
+            <option value="">SELECCIONA UN TRATAMIENTO</option>
+            <option value="opcion1" style="text-align: left;">Evaluacion gratuita de kinesiología</option>
+            <option value="opcion2" style="text-align: left;">Recovery Deportivo</option>
+            <option value="opcion3" style="text-align: left;">Servicio de Masoterapia / Masaje</option>
+            <option value="opcion4" style="text-align: left;">Programa Adulto mayor activo</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="container-fluid">
+            <div class="row datos-seleccion_tratamiento" style="margin-top: 20px;border-top-left-radius:5px ;border-top-right-radius: 5px;">
+              <div class="col-2"><i class="bi bi-card-list"></i></div>
+              <div class="col-10" style="text-align: left;">Evaluacion Gratuita de kinesiología</div>
+            </div>
+            <div class="row datos-seleccion_tratamiento" style="border-radius: 0%;">
+              <div class="col-2"><i class="bi bi-clock"></i></div>
+              <div class="col-10" style="text-align: left;">1 Hora</div>
+            </div>
+            <div class="row datos-seleccion_tratamiento" style="margin-bottom: 10px;border-bottom-left-radius:5px ;border-bottom-right-radius: 5px;">
+              <div class="col-2"><i class="bi bi-currency-dollar"></i></div>
+              <div class="col-10" style="text-align: left;" >0</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <select class="dropdown  seleccion">
+            <option value="">SELECCIONA UN PROFESIONAL</option>
+            <option value="opcion1" style="text-align: left;">kinesiologo / Masoterapeuta</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="container-fluid px-0">
+              <div class="row" >
+                <div class="col-4">
+                  <button class="boton-horas" style="background-color: red;">
+                    10:00
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button class="boton-horas" onclick="toggleColor(this)">
+                    10:30
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button class="boton-horas" onclick="toggleColor(this)">
+                    11:00
+                  </button>
+                </div>
+              </div> 
+              <div class="row">
+                <div class="col-4">
+                  <button class="boton-horas" onclick="toggleColor(this)">
+                    12:00
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button class="boton-horas" style="background-color: red;">
+                    12:30
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button class="boton-horas" onclick="toggleColor(this)">
+                    13:00
+                  </button>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <input class="dropdown  seleccion" placeholder="INGRESA TU RUT" >
+          </input>
+        </div>
+        <div class="row">
+          <button class="seleccion" style="background-color: green;color: white;" onclick="reservarHora()" >
+            RESERVAR HORA
+          </button>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+
+{% endblock %}

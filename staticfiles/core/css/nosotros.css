@@ -1,0 +1,435 @@
+/* Estilos para el contenedor principal */
+.cont {
+    position: relative; /* Posición relativa para el posicionamiento de elementos hijos */
+    overflow: hidden; /* Oculta cualquier desbordamiento de contenido */
+    height: 700px; /* Altura fija del contenedor */
+    padding: 80px 70px; /* Relleno interno superior e inferior de 80px y izquierdo y derecho de 70px */
+}
+  
+  /* Estilos para el elemento interno dentro del contenedor */
+  .cont__inner {
+    position: relative; /* Posición relativa para alinear elementos hijos absolutos */
+    height: 100%; /* Altura del elemento al 100% del contenedor */
+  }
+  
+  /* Estilos para el pseudo-elemento ::after del elemento .el__bg cuando se hace hover sobre .cont__inner */
+  .cont__inner:hover .el__bg:after {
+    opacity: 1; /* Opacidad del pseudo-elemento ::after cuando se hace hover */
+  }
+  
+  /* Estilos para los elementos .el (cada uno de los elementos dentro del contenedor) */
+.el {
+  position: absolute; /* Posición absoluta para superposición dentro de .cont */
+  left: 0; /* Alineación a la izquierda del contenedor */
+  top: 0; /* Alineación en la parte superior del contenedor */
+  width: 348px; /* Ancho fijo del elemento relativo al contenedor */
+  height: 540px; /* Altura del elemento al 100% del contenedor */
+  background: #031732; /* Color de fondo */
+  margin-left: 170px;
+  border-radius: 50px;
+  /* Transiciones CSS para efectos de animación */
+  -webkit-transition: width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s, -webkit-transform 0.6s 0.7s;
+  transition: width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s, -webkit-transform 0.6s 0.7s;
+  transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
+  transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s, -webkit-transform 0.6s 0.7s;
+  will-change: transform, width, opacity; /* Optimización para indicar qué propiedades cambiarán */
+}
+.el-2{
+  background: #c85209;
+}
+  
+.el-3{
+  background: #003a1d;
+}
+  
+  /* Estilos adicionales para el elemento .el que no está activo */
+  .el:not(.s--active) {
+    cursor: pointer; /* Estilo de cursor cuando no está activo */
+  }
+  
+  /* Estilos para el contenedor de desbordamiento dentro del elemento .el */
+  .el__overflow {
+    overflow: hidden; /* Oculta el desbordamiento de contenido */
+    position: relative; /* Posición relativa para contenido interno */
+    height: 100%; /* Altura del elemento al 100% del contenedor */
+  }
+  
+  /* Estilos para el elemento interno dentro de .el */
+
+  /* Estilos para .cont cuando está inactivo y .el__inner está transformado */
+  .cont.s--inactive .el__inner {
+    -webkit-transform: translate3d(0, 100%, 0); /* Transformación al 100% hacia abajo cuando .cont está inactivo */
+    transform: translate3d(0, 100%, 0);
+  }
+  
+  /* Estilos para el fondo del elemento .el */
+  .el__bg {
+    position: relative; /* Posición relativa para contener elementos absolutos */
+    width: calc(100vw - 140px); /* Ancho calculado en relación con el viewport */
+    height: 100%; /* Altura del elemento al 100% del contenedor */
+    /* Transición de transformación para efectos de animación */
+    -webkit-transition: -webkit-transform 0.6s 0.7s;
+    transition: -webkit-transform 0.6s 0.7s;
+    transition: transform 0.6s 0.7s;
+    transition: transform 0.6s 0.7s, -webkit-transform 0.6s 0.7s;
+    will-change: transform; /* Optimización para indicar qué propiedad cambiará */
+  }
+  
+  /* Estilos para el pseudo-elemento ::before dentro de .el__bg */
+  .el__bg:before {
+    content: ""; /* Contenido generado para el pseudo-elemento */
+    position: absolute; /* Posición absoluta dentro de .el__bg */
+    left: 0; /* Alineación a la izquierda del contenedor */
+    top: -5%; /* Desplazamiento hacia arriba del 5% del contenedor */
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 110%; /* Altura al 110% del contenedor */
+    background-size: cover; /* Tamaño del fondo para cubrir el contenedor */
+    background-position: center center; /* Posición del fondo centrado */
+    /* Transición de transformación para efectos de animación */
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: translate3d(0, 0, 0) scale(1); /* Transformación en 3D con escala de 1 */
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  
+  /* Estilos para .cont cuando está inactivo y .el__bg::before está transformado */
+  .cont.s--inactive .el__bg:before {
+    -webkit-transform: translate3d(0, -100%, 0) scale(1.2); /* Transformación hacia arriba del 100% y escala 1.2 cuando .cont está inactivo */
+    transform: translate3d(0, -100%, 0) scale(1.2);
+  }
+  
+  /* Estilos para .el cuando está activo y .el__bg::before está transformado */
+  .el.s--active .el__bg:before {
+    -webkit-transition: -webkit-transform 0.8s; /* Transición de transformación para efectos de animación en WebKit */
+    transition: -webkit-transform 0.8s;
+    transition: transform 0.8s; /* Transición de transformación para efectos de animación */
+    transition: transform 0.8s, -webkit-transform 0.8s;
+  }
+  
+  /* Estilos para el pseudo-elemento ::after dentro de .el__bg */
+  .el__bg:after {
+    content: ""; /* Contenido generado para el pseudo-elemento */
+    z-index: 1; /* Índice z para posicionamiento */
+    position: absolute; /* Posición absoluta dentro de .el__bg */
+    left: 0; /* Alineación a la izquierda del contenedor */
+    top: 0; /* Alineación en la parte superior del contenedor */
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 100%; /* Altura al 100% del contenedor */
+    background: rgba(0, 0, 0, 0.3); /* Fondo con opacidad */
+    opacity: 0; /* Opacidad inicial del 0 */
+    /* Transición de opacidad */
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+  
+  /* Estilos para .cont cuando está activo y .el__bg::after tiene opacidad */
+  .cont.s--el-active .el__bg:after {
+    -webkit-transition: opacity 0.5s 1.4s; /* Retraso de transición de opacidad para efectos de animación en WebKit */
+    transition: opacity 0.5s 1.4s;
+    opacity: 1 !important; /* Opacidad cuando .cont está activo */
+  }
+  
+  /* Estilos para el contenedor del contenido de vista previa dentro de .el */
+  .el__preview-cont {
+    z-index: 2; /* Índice z para posicionamiento */
+    display: -webkit-box; /* Display flexible en WebKit */
+    display: flex; /* Display flexible */
+    -webkit-box-pack: center; /* Alineación horizontal centrada */
+    justify-content: center; /* Alineación horizontal centrada */
+    -webkit-box-align: center; /* Alineación vertical centrada en WebKit */
+    align-items: center; /* Alineación vertical centrada */
+    position: absolute; /* Posición absoluta */
+    left: 0; /* Alineación a la izquierda del contenedor */
+    top: 0; /* Alineación en la parte superior del contenedor */
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 100%; /* Altura al 100% del contenedor */
+    -webkit-transition: all 0.3s 1.2s; /* Transición de todos los estilos con retardo de 1.2s */
+    transition: all 0.3s 1.2s;
+    
+}
+
+/* Estilos para .cont cuando está inactivo y .el__preview-cont está transformado */
+.cont.s--inactive .el__preview-cont {
+    opacity: 0; /* Opacidad cuando .cont está inactivo */
+    -webkit-transform: translateY(10px); /* Transformación de traslación en Y de 10px */
+    transform: translateY(10px);
+}
+
+/* Estilos para .cont cuando está activo y .el__preview-cont está transformado */
+.cont.s--el-active .el__preview-cont {
+    opacity: 0; /* Opacidad cuando .cont está activo */
+    -webkit-transform: translateY(30px); /* Transformación de traslación en Y de 30px */
+    transform: translateY(30px);
+    -webkit-transition: all 0.5s; /* Transición de todos los estilos en 0.5s */
+    transition: all 0.5s;
+  }
+  
+  /* Estilos para el encabezado del elemento .el */
+  .el__heading {
+    color: #fff; /* Color de texto blanco */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    font-size: 30px; /* Tamaño de fuente de 18px */
+    font-weight: bold;
+  }
+  
+  /* Estilos para el contenido del elemento .el */
+  .el__content {
+    z-index: -1; /* Índice z para posicionamiento detrás de otros elementos */
+    position: fixed; /* Posición absoluta */
+    left: 0; /* Alineación a la izquierda del contenedor */
+    top: 0; /* Alineación en la parte superior del contenedor */
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 100%; /* Altura al 100% del contenedor */
+    opacity: 0; /* Opacidad inicial del 0 */
+    pointer-events: none; /* Eventos de puntero desactivados */
+    -webkit-transition: all 0.1s; /* Transición de todos los estilos en 0.1s */
+    transition: all 0.1s;
+  }
+  
+  /* Estilos para .el cuando está activo y .el__content está visible */
+  .el.s--active .el__content {
+    z-index: 2; /* Índice z para posicionamiento delante de otros elementos */
+    opacity: 1; /* Opacidad del 1 */
+    pointer-events: auto; /* Eventos de puntero activados */
+    -webkit-transition: all 0.5s 1.4s; /* Transición de todos los estilos con retardo de 1.4s */
+    transition: all 0.5s 1.4s;
+  }
+  .el__text{
+    height: 100%;
+  }
+  .contenedor-texto{
+    color: black;
+    height: 80%;
+    width: 50%;
+    margin-left: 500px;
+    margin-top: 100px;
+  }
+  
+  .titulo-mision-datos{
+    margin-left: 250px;
+    color: aqua;
+
+  }
+  
+  
+  .el__close-btn {
+    z-index: -1; /* Z-index negativo para estar detrás de otros elementos */
+    position: absolute; /* Posición absoluta para controlar ubicación */
+    right: 10px; /* Alineación a la derecha con un margen de 10px */
+    top: 10px; /* Alineación en la parte superior con un margen de 10px */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    opacity: 0; /* Opacidad inicial */
+    pointer-events: none; /* Deshabilita eventos de puntero */
+    -webkit-transition: all 0s 0.45s; /* Transición CSS para todos los cambios */
+    transition: all 0s 0.45s;
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón */
+  }
+  
+  /* Estilo del botón de cierre cuando .el tiene la clase .s--active */
+  .el.s--active .el__close-btn {
+    z-index: 5; /* Z-index para estar sobre otros elementos */
+    opacity: 1; /* Botón de cierre visible */
+    pointer-events: auto; /* Habilita eventos de puntero */
+    -webkit-transition: all 0s 1.4s; /* Transición CSS */
+    transition: all 0s 1.4s;
+  }
+  
+  /* Pseudo-elementos antes y después del botón de cierre */
+  .el__close-btn:before, .el__close-btn:after {
+    content: ""; /* Contenido vacío */
+    position: absolute; /* Posición absoluta */
+    left: 0; /* Alineación a la izquierda */
+    top: 50%; /* Alineación vertical al 50% */
+    width: 100%; /* Ancho del pseudo-elemento */
+    height: 8px; /* Altura del pseudo-elemento */
+    margin-top: -4px; /* Ajuste para centrar verticalmente */
+    background: #000000; /* Fondo blanco */
+    opacity: 0; /* Opacidad inicial */
+    -webkit-transition: opacity 0s; /* Transición para opacidad */
+    transition: opacity 0s;
+  }
+  
+  /* Pseudo-elementos antes y después del botón de cierre cuando .el tiene la clase .s--active */
+  .el.s--active .el__close-btn:before, .el.s--active .el__close-btn:after {
+    opacity: 1; /* Pseudo-elementos visibles */
+  }
+  
+  /* Estilo del pseudo-elemento antes del botón de cierre */
+  .el__close-btn:before {
+    -webkit-transform: rotate(45deg) translateX(100%); /* Rotación y traslación */
+            transform: rotate(45deg) translateX(100%);
+  }
+  
+  /* Estilo del pseudo-elemento antes del botón de cierre cuando .el tiene la clase .s--active */
+  .el.s--active .el__close-btn:before {
+    -webkit-transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57); /* Transición */
+    transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+    -webkit-transform: rotate(45deg) translateX(0); /* Rotación y traslación */
+            transform: rotate(45deg) translateX(0);
+  }
+  
+  /* Estilo del pseudo-elemento después del botón de cierre */
+  .el__close-btn:after {
+    -webkit-transform: rotate(-45deg) translateX(100%); /* Rotación y traslación */
+            transform: rotate(-45deg) translateX(100%);
+  }
+  
+  /* Estilo del pseudo-elemento después del botón de cierre cuando .el tiene la clase .s--active */
+  .el.s--active .el__close-btn:after {
+    -webkit-transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57); /* Transición */
+    transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+    -webkit-transform: rotate(-45deg) translateX(0); /* Rotación y traslación */
+            transform: rotate(-45deg) translateX(0);
+  }
+  
+  /* Estilos para el primer elemento */
+  .el:nth-child(1) {
+    -webkit-transform: translate3d(0%, 0, 0); /* Transformación 3D */
+            transform: translate3d(0%, 0, 0);
+    -webkit-transform-origin: 50% 50%; /* Origen de la transformación */
+            transform-origin: 50% 50%;
+  }
+  
+  /* Estilos para .cont cuando tiene la clase .s--el-active y el primer elemento no tiene la clase .s--active */
+  .cont.s--el-active .el:nth-child(1):not(.s--active) {
+    -webkit-transform: scale(0.5) translate3d(0%, 0, 0); /* Escala y transformación 3D */
+            transform: scale(0.5) translate3d(0%, 0, 0);
+    opacity: 0; /* Opacidad cero */
+    -webkit-transition: opacity 0.95s, -webkit-transform 0.95s; /* Transición de opacidad y transformación */
+    transition: opacity 0.95s, -webkit-transform 0.95s;
+    transition: transform 0.95s, opacity 0.95s; /* Transición de transformación y opacidad */
+    transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s; /* Transición de transformación, opacidad y transformación */
+  }
+  
+  /* Estilos para .el__inner del primer elemento */
+  .el:nth-child(1) .el__inner {
+    -webkit-transition-delay: 0s; /* Retraso de la transición */
+            transition-delay: 0s;
+  }
+  
+  /* Estilos para .el__bg del primer elemento */
+  .el:nth-child(1) .el__bg {
+    -webkit-transform: translate3d(0%, 0, 0); /* Transformación 3D */
+            transform: translate3d(0%, 0, 0);
+  }
+  
+  /* Estilos para el pseudo-elemento :before de .el__bg del primer elemento */
+  .el:nth-child(1) .el__bg:before {
+    -webkit-transition-delay: 0s; /* Retraso de la transición */
+            transition-delay: 0s;
+  }
+  
+  /* Estilos para el segundo elemento */
+  .el:nth-child(2) {
+    -webkit-transform: translate3d(105.2083333333%, 0, 0); /* Transformación 3D */
+            transform: translate3d(105.2083333333%, 0, 0);
+    -webkit-transform-origin: 155.2083333333% 50%; /* Origen de la transformación */
+            transform-origin: 155.2083333333% 50%;
+  }
+  
+  /* Estilos para .cont cuando tiene la clase .s--el-active y el segundo elemento no tiene la clase .s--active */
+  .cont.s--el-active .el:nth-child(2):not(.s--active) {
+    -webkit-transform: scale(0.5) translate3d(105.2083333333%, 0, 0); /* Escala y transformación 3D */
+            transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+    opacity: 0; /* Opacidad cero */
+    -webkit-transition: opacity 0.95s, -webkit-transform 0.95s; /* Transición de opacidad y transformación */
+    transition: opacity 0.95s, -webkit-transform 0.95s;
+    transition: transform 0.95s, opacity 0.95s; /* Transición de transformación y opacidad */
+    transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s; /* Transición de transformación, opacidad y transformación */
+  }
+  
+  /* Estilos para .el__inner del segundo elemento */
+  .el:nth-child(2) .el__inner {
+    -webkit-transition-delay: 0.1s; /* Retraso de la transición */
+            transition-delay: 0.1s;
+  }
+  
+  /* Estilos para .el__bg del segundo elemento */
+  .el:nth-child(2) .el__bg {
+    -webkit-transform: translate3d(-19.2%, 0, 0); /* Transformación 3D */
+            transform: translate3d(-19.2%, 0, 0);
+  }
+  
+  /* Estilos para el pseudo-elemento :before de .el__bg del segundo elemento */
+  .el:nth-child(2) .el__bg:before {
+    -webkit-transition-delay: 0.1s; /* Retraso de la transición */
+            transition-delay: 0.1s;
+  }
+  
+  /* Estilos para el tercer elemento */
+  .el:nth-child(3) {
+    -webkit-transform: translate3d(210.4166666667%, 0, 0); /* Transformación 3D */
+            transform: translate3d(210.4166666667%, 0, 0);
+    -webkit-transform-origin: 260.4166666667% 50%; /* Origen de la transformación */
+            transform-origin: 260.4166666667% 50%;
+  }
+  
+  /* Estilos para .cont cuando tiene la clase .s--el-active y el tercer elemento no tiene la clase .s--active */
+.cont.s--el-active .el:nth-child(3):not(.s--active) {
+    -webkit-transform: scale(0.5) translate3d(210.4166666667%, 0, 0); /* Escala y transformación 3D */
+            transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+    opacity: 0; /* Opacidad cero */
+    -webkit-transition: opacity 0.95s, -webkit-transform 0.95s; /* Transición de opacidad y transformación */
+    transition: opacity 0.95s, -webkit-transform 0.95s;
+    transition: transform 0.95s, opacity 0.95s; /* Transición de transformación y opacidad */
+    transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s; /* Transición de transformación, opacidad y transformación */
+  }
+  
+  /* Estilos para .el__inner del tercer elemento */
+  .el:nth-child(3) .el__inner {
+    -webkit-transition-delay: 0.2s; /* Retraso de la transición */
+            transition-delay: 0.2s;
+  }
+  
+  /* Estilos para .el__bg del tercer elemento */
+  .el:nth-child(3) .el__bg {
+    -webkit-transform: translate3d(-38.4%, 0, 0); /* Transformación 3D */
+            transform: translate3d(-38.4%, 0, 0);
+  }
+  
+  /* Estilos para el pseudo-elemento :before de .el__bg del tercer elemento */
+  .el:nth-child(3) .el__bg:before {
+    -webkit-transition-delay: 0.2s; /* Retraso de la transición */
+            transition-delay: 0.2s;
+  }
+  /* Estilos para cuando se hace hover sobre .el__bg */
+  .el:hover .el__bg:after {
+    opacity: 0; /* Opacidad cero */
+  }
+ /*----------------------------------------------------------------------------------------------------*/ 
+  /* Estilos para cuando .el tiene la clase .s--active */
+  .el.s--active {
+    z-index: 1; /* Índice Z */
+    width: 1200px; /* Ancho al 100% */
+    -webkit-transform: translate3d(0, 0, 0); /* Transformación 3D */
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: width 0.7s 0.7s, z-index 0s, -webkit-transform 0.6s; /* Transición de ancho, índice Z y transformación */
+    transition: width 0.7s 0.7s, z-index 0s, -webkit-transform 0.6s;
+    transition: transform 0.6s, width 0.7s 0.7s, z-index 0s; /* Transición de transformación, ancho y índice Z */
+    transition: transform 0.6s, width 0.7s 0.7s, z-index 0s, -webkit-transform 0.6s; /* Transición de transformación, ancho, índice Z y transformación */
+  }
+  
+  /* Estilos para .el__bg cuando .el tiene la clase .s--active */
+  .el.s--active .el__bg {
+    -webkit-transform: translate3d(0, 0, 0); /* Transformación 3D */
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.6s; /* Transición de transformación */
+    transition: -webkit-transform 0.6s;
+    transition: transform 0.6s; /* Transición de transformación */
+    transition: transform 0.6s, -webkit-transform 0.6s; /* Transición de transformación */
+  }
+  
+  /* Estilos para el pseudo-elemento :before de .el__bg cuando .el tiene la clase .s--active */
+  .el.s--active .el__bg:before {
+    -webkit-transition-delay: 0.6s; /* Retraso de la transición */
+            transition-delay: 0.6s;
+    -webkit-transform: scale(1.1); /* Escala */
+            transform: scale(1.1);
+  }
+.foto-ejemplo{
+  z-index: 1;
+  padding-left: 348px;
+}

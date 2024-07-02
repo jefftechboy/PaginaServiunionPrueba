@@ -1,0 +1,94 @@
+html,body{
+    font-family: 'Montserrat';
+}
+.circulo-pequeño-servicios{
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-left: 25%;
+}
+.columna-servicio-centro{
+    width: 100px;
+}
+
+
+.titulo-fila-servicios{
+    font-size: 40px;
+    color: #004aad;
+    margin-left: 33%;
+    margin-bottom: 100px;
+}
+.fila-texto-servicios{
+    margin-top: 5px;
+}
+
+
+
+.fila-boton-agenda-aqui{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.boton-agenda-aca{
+    background-color: #004aad;
+    border-radius: 70px;
+    height: 60px;
+    width: 360px;
+    font-size: 30px;
+    border-color: transparent;
+    color: white;
+}
+.boton-agenda-aca:hover{
+    background-color: #004aad;
+    color: rgb(255, 255, 255);
+}
+.titulo-fila-servicios{
+    padding-left: 4.3%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.fila-inicio-color{
+    height: 120px;
+    background-color: orange;
+    margin-bottom: 30px;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.convenios-titulo{
+    color: black; 
+    margin-left: 85px;
+    text-align: center;
+    color: #004aad;
+    margin-left: 35%;
+    font-size: 45px;
+}
+.videos-inicio{
+    border: 5px solid blue; /* Ancho del borde y color */
+      border-radius: 8px; /* Bordes redondeados */
+      overflow: hidden; /* Evita que el borde se expanda por el margen del iframe */
+}
+.titulo-video{
+    color: black;
+    margin-left: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.boton-video{
+    background-color: #004aad;
+    height: 40px;
+    width: 140px;
+    font-size: 20px;
+    border-color: transparent;
+    color: white;
+}
+.boton-video:hover{
+    background-color: #004aad;
+}
+.video-grande-caja{
+    margin-left: 50px;
+}

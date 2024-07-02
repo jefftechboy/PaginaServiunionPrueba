@@ -1,0 +1,43 @@
+
+.carusel-convenios{
+    width: 98%;
+    left: 1%;
+    right: 1%;
+    height: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.contenedor-imagenes-convenios{
+    width: 98%;
+    height: 100px;
+}
+.btn-circle{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 130px;
+    margin-right: 20px;
+    margin-left: 20px;   
+}
+.circulo-pequeño-convenios{
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-left: 25%;
+}
+.carusel-convenios .btn-circle{
+    padding-top: 0%;
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    padding: 10px 15px; 
+}
+.card{
+    border-radius: 10%;
+}

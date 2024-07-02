@@ -1,0 +1,432 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+<h1 style="margin-top: 100px; text-align: center;"> CONVENIOS REGION METROPOLITANA</h1>
+<h1 style="margin-top: 20px; margin-bottom: 20px; text-align: center;font-size: 30px;"> ELIGE TIPO</h1>
+
+
+
+  <div class="button-wrapper">
+    <!-- Botón para mostrar/ocultar el conjunto azul -->
+    <button onclick="toggleConjunto('blue')" class="boton-convenios" style="color: white;">SALUD</button>
+
+    <!-- Botón para mostrar/ocultar el conjunto morado -->
+    <button onclick="toggleConjunto('purple')" class="boton-convenios" style="background-color: green;color: white;">TURISMO</button>
+
+    <!-- Botón para mostrar/ocultar el conjunto rojo -->
+    <button onclick="toggleConjunto('red')"class="boton-convenios" style="background-color: rgb(58, 143, 254);color: white;">BELLEZA</button>
+
+    <!-- Botón para mostrar/ocultar el conjunto verde -->
+    <button onclick="toggleConjunto('green')"class="boton-convenios" style="background-color: orange;color: white;">SERVICIOS</button>
+  </div>
+
+  <!-- SALUD -->
+  <div class="container-wrapper" id="conjuntoAzul">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Primer slide -->
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container-2">
+                              <img src="https://serviunion.cl/wp-content/uploads/2024/06/Mesa-de-trabajo-1@4Logo-Clini-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="header-container">
+                          <img src="https://serviunion.cl/wp-content/uploads/2024/06/Logo-Dentimagen-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="header-container" style="background-color: black;">
+                          <img src="https://serviunion.cl/wp-content/uploads/2024/06/Logo-Mi-intimidad-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo slide -->
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2024/04/Clinica-Menta-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2024/04/Logo-Optica-Brilaz-1-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2024/05/Optica-sol-de-italia-y-optica-precision-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de control -->
+          <a class="carousel-control-prev btn-circle btn-circulo-carusel" href="#carouselExampleControls2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next btn-circle btn-circulo-carusel" href="#carouselExampleControls2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TURISMO -->
+  <div class="container-wrapper" id="conjuntoMorado">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Primer slide -->
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2023/04/convenio-hotel-tupa.png" style=" width: 100%;height: 100%; background-color: transparent;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/133213046_4162073917154423_191939718397625659_n-300x300.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2023/04/Convenio-vientos-del-sur.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo slide -->
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/79701918_2842427019111295_3963643709081255936_n-300x300.jpg" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/Diseno-sin-titulo-3-1-300x300.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/09/70225480_2709617459050594_6201619165501980672_n-300x300.jpg" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de control -->
+          <a class="carousel-control-prev btn-circle btn-circulo-carusel" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next btn-circle btn-circulo-carusel" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BELLEZA -->
+  <div class="container-wrapper" id="conjuntoRojo">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Primer slide -->
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/Diseno-sin-titulo-300x300.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/09/27654443_1799668896719200_8858676316332112494_n-300x300.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="" style=" width: 100%;height: 100%;" >
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo slide -->
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de control -->
+          <a class="carousel-control-prev btn-circle btn-circulo-carusel" href="#carouselExampleControls3" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next btn-circle btn-circulo-carusel" href="#carouselExampleControls3" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <div class="container-wrapper" id="conjuntoVerde">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Primer slide -->
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2023/10/Open-English-Logo.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/pacific-300x300.jpeg" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/236982626_235255181937777_1447420637075574101_n-300x300.jpg" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo slide -->
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/121700252_10160961197143849_5822955533864701233_n-300x300.jpg" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                    <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2021/10/59380309_2279129602149555_2179860133679464448_n-300x300.png" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-4">
+                   <a href="#">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="header-container">
+                            <img src="https://serviunion.cl/wp-content/uploads/2024/06/Logo-Centrico-Padel-300x300.webp" style=" width: 100%;height: 100%;" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de control -->
+          <a class="carousel-control-prev btn-circle btn-circulo-carusel" href="#carouselExampleControls4" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next btn-circle btn-circulo-carusel" href="#carouselExampleControls4" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="container">
+  <div class="row" style="height: 200px;"></div>
+</div>
+{% endblock %}

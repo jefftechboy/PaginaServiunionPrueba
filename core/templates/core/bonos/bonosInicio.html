@@ -1,0 +1,159 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+{% block js %}
+<script>
+    // Utilizamos jQuery para manejar el evento de pasar el ratón
+    $(document).ready(function() {
+      $('.container-bono-fiestas-patrias').mouseover(function() {
+        $(this).find('.contenedor-animado').addClass('mostrar');
+      });
+  
+      $('.container-bono-fiestas-patrias').mouseout(function() {
+        $(this).find('.contenedor-animado').removeClass('mostrar');
+      });
+    });
+    window.addEventListener('scroll', function() {
+                var filaLinks = document.querySelector('.fila-links');
+                var scrollPosY = window.pageYOffset || document.documentElement.scrollTop;
+
+                // Ajustar el top basado en la posición de scroll
+                if (scrollPosY <= 120) {
+                    filaLinks.style.top = (120 - scrollPosY) + 'px';
+                } else {
+                    filaLinks.style.top = '0';
+                }
+            });
+</script>
+<script>
+
+</script>
+{% endblock %}
+<h1 style="margin-top: 150px; text-align: center; margin-bottom: 50px;">BONOS</h1>
+<div class="container px-0 contenedor-todos-bonos">
+    <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="container-bono-fiestas-patrias" style="margin-left: 39px;">
+              <div class="contenedor-animado">
+                <div class="contenedor-animado-inner">
+                  <button class="card-button" data-bs-toggle="modal" style="background-color:#004aad ;" data-bs-target="#exampleModal">
+                    Mas Informacion
+                  </button>
+                </div>
+              </div>
+              <p class="texto-fondo-principal">BONO FIESTAS PATRIAS</p>
+          </div>
+          </div>
+          <div class="row">
+            <div class="container-bono-fiestas-navidad" style="margin-left: 39px;">
+                <div class="contenedor-animado4">
+                  <div class="contenedor-animado-inner4">
+                    <button class="card-button" data-bs-toggle="modal" style="background-color:#004aad ;" data-bs-target="#exampleModal3">
+                      Mas Informacion
+                    </button>
+                  </div>
+                </div>
+                <p class="texto-fondo-principal4">BONO NAVIDAD </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="container-bono-estudiantil" style="margin-left: 20px;">
+                    <div class="contenedor-animado-2">
+                      <div class="contenedor-animado-inner-2">
+                        <button class="card-button" data-bs-toggle="modal" style="background-color:#004aad ;" data-bs-target="#exampleModal4">
+                          Mas Informacion
+                        </button>
+                      </div>
+                    </div>
+                    <p class="texto-fondo-principal-2">BONO ESTUDIANTIL</p>
+                </div>            
+            </div>
+            <div class="row">
+                <div class="container-bono-esfuerzo" style="margin-left: 20px;">
+                    <div class="contenedor-animado-3">
+                      <div class="contenedor-animado-inner-3">
+                        <button class="card-button" data-bs-toggle="modal" style="background-color:#004aad ;" data-bs-target="#exampleModal2">
+                          Mas Informacion
+                        </button>
+                      </div>
+                    </div>
+                    <p class="texto-fondo-principal-3">BONO ESFUERZO</p>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal-1 FIESTAS PATRIAS -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/bono-fiestas-patrias.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+<!-- Modal-2 ESFUERZO -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/bono-esfuerzo.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+<!-- Modal-3  NAVIDAD -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">3
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/bono-navidad.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+<!-- Modal-4  ESTUDIANTIL -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">3
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/bono-estudiantil.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+{% endblock %}

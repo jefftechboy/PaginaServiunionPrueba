@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.redes-sociales{
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 0%;
+}
+.circulo-pequeño-footer-arriba{
+    height: 120px;
+    width: 120px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    margin-left: 80px
+}
+.circulo-pequeño-footer-abajo{
+    height: 120px;
+    width: 120px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 80px;
+}
+.titulo-contactanos{
+    text-align: center;
+    margin: 0%;
+    padding: 0%;   
+}
+.lista-contacto{
+    margin-top: 10px;
+    text-align: left;
+}
+.contenedor-redes-sociales{
+    margin-top: 50px;
+}
+.titulo-nosotros{
+    text-align: left;
+    margin-left: 20px
+}
+.texto-nosotros{
+    text-align: left;
+    margin-left: 20px
+}
+.titulo-sugerencia-reclamo{
+    margin-top: 40px;
+}
+.contenedor-footer{
+    background-color: rgb(10, 10, 107);
+}

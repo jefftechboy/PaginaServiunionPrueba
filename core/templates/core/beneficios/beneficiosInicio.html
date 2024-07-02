@@ -1,0 +1,139 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+<h1 style="text-align: center;margin-top: 110px;margin-bottom: 50px;">BENEFICIOS</h1>
+<div class="container" style="margin-bottom: 70px;">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="row">
+        <div class="col-4" 
+
+            style="margin-top: 10px;
+            text-align: center;
+            padding-right: 30px; 
+            color: #01964e; 
+            background-color: transparent; 
+            border-color: transparent; 
+            font-size: 30px;
+            font-weight: bold;">
+
+            HOSPEDAJE
+        </div>
+        <div class="col-4" 
+
+            style="margin-top: 10px;
+            padding-right: 30px; 
+            text-align: center;
+            color: #d86924; 
+            background-color: transparent; 
+            border-color: transparent; 
+            font-size: 30px;
+            font-weight: bold;">
+
+            INCENDIO
+        </div>
+        <div class="col-4" 
+
+            style="margin-top: 10px;
+            padding-right: 30px; 
+            color: #004aad; 
+            text-align: center;
+            background-color: transparent; 
+            border-color: transparent; 
+            font-size: 30px;
+            font-weight: bold;">
+
+            MORTUARIO
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+
+          <img src="{% static 'core/img/hospedaje.jpeg' %}" width="200px" height="200px" style="margin-left: 35px; margin-top: 30px;">
+        </div>
+        <div class="col-4">
+
+          <img src="{% static 'core/img/incendio.jpeg' %}" width="200px" height="200px" style="margin-left: 35px; margin-top: 30px;">
+        </div>
+        <div class="col-4">
+
+          <img src="{% static 'core/img/mortuario.jpeg' %}" width="200px" height="200px" style="margin-left: 35px; margin-top: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+
+          <button class="card-button" style="background-color: #01964e;font-size: 17px;
+            font-weight: bold; margin-left: 75px; margin-top: 40px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</button>
+        </div>
+        <div class="col-4">
+
+          <button class="card-button" style="background-color:#d86924 ;font-size: 17px;
+            font-weight: bold; margin-left: 75px; margin-top: 40px;" data-bs-toggle="modal" data-bs-target="#exampleModal2">Ver mas</button>
+        </div>
+        <div class="col-4">
+
+          <button class="card-button" data-bs-toggle="modal" style="background-color:#004aad ;font-size: 17px;
+            font-weight: bold; margin-left: 75px; margin-top: 40px;" data-bs-target="#exampleModal3">Ver mas</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+
+
+
+<!-- Modal-1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/hospedaje-texto.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+<!-- Modal-2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/incendio-texto.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+<!-- Modal-3 -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <!-- BOTON CERRAR -->
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
+          style="position: absolute; top: 0; right: 0; z-index: 1; 
+          margin-top: 15px; 
+          padding-right: 15px;">
+              <i class="bi bi-x"></i>
+          </button>
+          <img src="{% static 'core/img/mortuario-texto.jpeg' %}" alt=""
+                style="width: 100%; height: auto; display: block; border-radius: 20px;">
+      </div>
+  </div>
+  
+</div>
+{% endblock %}

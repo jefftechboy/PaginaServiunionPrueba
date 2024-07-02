@@ -1,0 +1,96 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+<h1 class="titulo-contactanos">CONTACTANOS</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div class="container contenedor-texto-contactanos">
+                <div class="row">
+                    <div class="container-fluid fila-texto-principal">
+                        <p>Tienes alguna pregunta, comentario, sugerencia o reclamo</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid fila-texto-secundario">
+                        <p>Por favor haz no lo saber </p>
+                    </div>
+                </div>
+                <div class="row fila-espacio">
+
+                </div>
+                <div class="row">
+                    <div class="container-fluid titulo-encuentranos">
+                        <h2>ENCUENTRANOS</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container container-circulo-textos">
+                        <div class="row">
+                            <div class="col-2"> 
+                                <div class="container circulo-contactanos"></div>
+                            </div>
+                            <div class="col-10"> 
+                                <p>Padre Alonso de Ovalle</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"> 
+                                <div class="container circulo-contactanos"></div>
+                            </div>
+                            <div class="col-10"> 
+                                <p>Telefono</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"> 
+                                <div class="container circulo-contactanos"></div>
+                            </div>
+                            <div class="col-10"> 
+                                <p>Email</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="container-fluid contenedor-general-formulario">
+                <div class="row">
+                    <div class="container contenedor-formulario">
+                        <form style="width: 26rem; margin-top: 50px;">                            
+                            <div class="row">
+                                <!-- NOMBRE input -->
+                                <div class="col-6">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="form4Example1" class="form-control" placeholder="Valor inicial" />
+                                    </div>
+                                </div>
+                                <!-- TELEFONO input -->
+                                <div class="col-6">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="form4Example2" class="form-control" placeholder="Telefono"/>
+                                    </div>
+                                </div>
+                            </div>                                                      
+                            <!-- CORREO input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="text" id="form4Example3" class="form-control" placeholder="Correo"/>
+                            </div>
+                          
+                            <!-- MENSAJE input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <textarea class="form-control" style="resize: none;" rows="10" id="form4Example4" placeholder="Mensaje"></textarea>
+                            </div>
+                          
+                            <!-- BOTON ENVIAR -->
+                            <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">ENVIAR</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
