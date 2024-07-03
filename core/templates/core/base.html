@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <!--------------------------------------------------  ESTILOS CSS ------------------------------------------------------------->
         <!-- STYLE NAVBAR -->
         <style>
             .fila-principal{
@@ -1719,8 +1720,432 @@ font-size: 20px;
     outline: none;
 }
         </style>
+        <!--------------------------------------------------  ESTILOS JS ------------------------------------------------------------->
+        <!-- AGENDA -->
+        <script>
+            const daysContainer = document.querySelector(".days"),
+  nextBtn = document.querySelector(".next-btn"),
+  prevBtn = document.querySelector(".prev-btn"),
+  month = document.querySelector(".month"),
+  todayBtn = document.querySelector(".today-btn");
 
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+// get current date
+const date = new Date();
+
+// get current month
+let currentMonth = date.getMonth();
+
+// get current year
+let currentYear = date.getFullYear();
+
+// function to render days
+function renderCalendar() {
+  // get prev month current month and next month days
+  date.setDate(1);
+  const firstDay = new Date(currentYear, currentMonth, 1);
+  const lastDay = new Date(currentYear, currentMonth + 1, 0);
+  const lastDayIndex = lastDay.getDay();
+  const lastDayDate = lastDay.getDate();
+  const prevLastDay = new Date(currentYear, currentMonth, 0);
+  const prevLastDayDate = prevLastDay.getDate();
+  const nextDays = 7 - lastDayIndex - 1;
+
+  // update current year and month in header
+  month.innerHTML = `${months[currentMonth]} ${currentYear}`;
+
+  // update days html
+  let days = "";
+
+  // prev days html
+  for (let x = firstDay.getDay(); x > 0; x--) {
+    days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
+  }
+
+  // current month days
+  for (let i = 1; i <= lastDayDate; i++) {
+    // check if its today then add today class
+    if (
+      i === new Date().getDate() &&
+      currentMonth === new Date().getMonth() &&
+      currentYear === new Date().getFullYear()
+    ) {
+      // if date month year matches add today
+      days += `<div class="day today">${i}</div>`;
+    } else {
+      //else dont add today
+      days += `<div class="day ">${i}</div>`;
+    }
+  }
+
+  // next MOnth days
+  for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="day next">${j}</div>`;
+  }
+
+  // run this function with every calendar render
+  hideTodayBtn();
+  daysContainer.innerHTML = days;
+}
+
+renderCalendar();
+
+nextBtn.addEventListener("click", () => {
+  // increase current month by one
+  currentMonth++;
+  if (currentMonth > 11) {
+    // if month gets greater that 11 make it 0 and increase year by one
+    currentMonth = 0;
+    currentYear++;
+  }
+  // rerender calendar
+  renderCalendar();
+});
+
+// prev monyh btn
+prevBtn.addEventListener("click", () => {
+  // increase by one
+  currentMonth--;
+  // check if let than 0 then make it 11 and deacrease year
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  renderCalendar();
+});
+
+// go to today
+todayBtn.addEventListener("click", () => {
+  // set month and year to current
+  currentMonth = date.getMonth();
+  currentYear = date.getFullYear();
+  // rerender calendar
+  renderCalendar();
+});
+
+// lets hide today btn if its already current month and vice versa
+
+function hideTodayBtn() {
+  if (
+    currentMonth === new Date().getMonth() &&
+    currentYear === new Date().getFullYear()
+  ) {
+    todayBtn.style.display = "none";
+  } else {
+    todayBtn.style.display = "flex";
+  }
+}
+        </script>
+        <!-- BONOS DROPDOWN -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    var dropdowns = document.querySelectorAll('.dropdown-menu .dropdown-toggle');
+    
+    dropdowns.forEach(function (dropdown) {
+        dropdown.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var submenu = dropdown.nextElementSibling;
+            if (submenu) {
+                if (submenu.classList.contains('show')) {
+                    submenu.classList.remove('show');
+                } else {
+                    document.querySelectorAll('.dropdown-menu .dropdown-menu').forEach(function (sub) {
+                        sub.classList.remove('show');
+                    });
+                    submenu.classList.add('show');
+                }
+            }
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        document.querySelectorAll('.dropdown-menu .dropdown-menu').forEach(function (submenu) {
+            submenu.classList.remove('show');
+        });
+    });
+});
+
+        </script>
+        <!-- CONVENIOS -->
+        <script>
+            var conjuntoAzul = document.getElementById("conjuntoAzul");
+    var conjuntoMorado = document.getElementById("conjuntoMorado");
+    var conjuntoRojo = document.getElementById("conjuntoRojo");
+    var conjuntoVerde = document.getElementById("conjuntoVerde");
+
+    var azulActivo = false;
+    var moradoActivo = false;
+    var rojoActivo = false;
+    var verdeActivo = false;
+
+    function toggleConjunto(color) {
+      if (color === 'blue') {
+        if (!azulActivo) {
+          // Mostrar conjunto azul
+          conjuntoAzul.style.display = 'flex';
+          // Aplicar transición suave a los contenedores azules
+          var contenedoresAzul = document.querySelectorAll('#conjuntoAzul .header-container-2');
+          contenedoresAzul.forEach(function(contenedor) {
+            contenedor.classList.add('active');
+          });
+          azulActivo = true;
+
+          // Ocultar conjunto morado si está activo
+          if (moradoActivo) {
+            conjuntoMorado.style.display = 'none';
+            var contenedoresMorado = document.querySelectorAll('#conjuntoMorado .header-container-2');
+            contenedoresMorado.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            moradoActivo = false;
+          }
+          // Ocultar conjunto rojo si está activo
+          if (rojoActivo) {
+            conjuntoRojo.style.display = 'none';
+            var contenedoresRojo = document.querySelectorAll('#conjuntoRojo .header-container-2');
+            contenedoresRojo.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            rojoActivo = false;
+          }
+          // Ocultar conjunto verde si está activo
+          if (verdeActivo) {
+            conjuntoVerde.style.display = 'none';
+            var contenedoresVerde = document.querySelectorAll('#conjuntoVerde .header-container-2');
+            contenedoresVerde.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            verdeActivo = false;
+          }
+        } else {
+          // Cerrar conjunto azul
+          var contenedoresAzul = document.querySelectorAll('#conjuntoAzul .header-container-2');
+          contenedoresAzul.forEach(function(contenedor) {
+            contenedor.classList.remove('active');
+          });
+          setTimeout(function() {
+            conjuntoAzul.style.display = 'none';
+          }, 300); // Esperar a que termine la transición
+          azulActivo = false;
+        }
+      }
+
+      if (color === 'purple') {
+        if (!moradoActivo) {
+          // Mostrar conjunto morado
+          conjuntoMorado.style.display = 'flex';
+          // Aplicar transición suave a los contenedores morados
+          var contenedoresMorado = document.querySelectorAll('#conjuntoMorado .header-container-2');
+          contenedoresMorado.forEach(function(contenedor) {
+            contenedor.classList.add('active');
+          });
+          moradoActivo = true;
+
+          // Ocultar conjunto azul si está activo
+          if (azulActivo) {
+            conjuntoAzul.style.display = 'none';
+            var contenedoresAzul = document.querySelectorAll('#conjuntoAzul .header-container-2');
+            contenedoresAzul.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            azulActivo = false;
+          }
+          // Ocultar conjunto rojo si está activo
+          if (rojoActivo) {
+            conjuntoRojo.style.display = 'none';
+            var contenedoresRojo = document.querySelectorAll('#conjuntoRojo .header-container-2');
+            contenedoresRojo.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            rojoActivo = false;
+          }
+          // Ocultar conjunto verde si está activo
+          if (verdeActivo) {
+            conjuntoVerde.style.display = 'none';
+            var contenedoresVerde = document.querySelectorAll('#conjuntoVerde .header-container-2');
+            contenedoresVerde.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            verdeActivo = false;
+          }
+        } else {
+          // Cerrar conjunto morado
+          var contenedoresMorado = document.querySelectorAll('#conjuntoMorado .header-container-2');
+          contenedoresMorado.forEach(function(contenedor) {
+            contenedor.classList.remove('active');
+          });
+          setTimeout(function() {
+            conjuntoMorado.style.display = 'none';
+          }, 300); // Esperar a que termine la transición
+          moradoActivo = false;
+        }
+      }
+
+      if (color === 'red') {
+        if (!rojoActivo) {
+          // Mostrar conjunto rojo
+          conjuntoRojo.style.display = 'flex';
+          // Aplicar transición suave a los contenedores rojos
+          var contenedoresRojo = document.querySelectorAll('#conjuntoRojo .header-container-2');
+          contenedoresRojo.forEach(function(contenedor) {
+            contenedor.classList.add('active');
+          });
+          rojoActivo = true;
+
+          // Ocultar conjunto azul si está activo
+          if (azulActivo) {
+            conjuntoAzul.style.display = 'none';
+            var contenedoresAzul = document.querySelectorAll('#conjuntoAzul .header-container-2');
+            contenedoresAzul.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            azulActivo = false;
+          }
+          // Ocultar conjunto morado si está activo
+          if (moradoActivo) {
+            conjuntoMorado.style.display = 'none';
+            var contenedoresMorado = document.querySelectorAll('#conjuntoMorado .header-container-2');
+            contenedoresMorado.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            moradoActivo = false;
+          }
+          // Ocultar conjunto verde si está activo
+          if (verdeActivo) {
+            conjuntoVerde.style.display = 'none';
+            var contenedoresVerde = document.querySelectorAll('#conjuntoVerde .header-container-2');
+            contenedoresVerde.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            verdeActivo = false;
+          }
+        } else {
+          // Cerrar conjunto rojo
+          var contenedoresRojo = document.querySelectorAll('#conjuntoRojo .header-container-2');
+          contenedoresRojo.forEach(function(contenedor) {
+            contenedor.classList.remove('active');
+          });
+          setTimeout(function() {
+            conjuntoRojo.style.display = 'none';
+          }, 300); // Esperar a que termine la transición
+          rojoActivo = false;
+        }
+      }
+
+      if (color === 'green') {
+        if (!verdeActivo) {
+          // Mostrar conjunto verde
+          conjuntoVerde.style.display = 'flex';
+          // Aplicar transición suave a los contenedores verdes
+          var contenedoresVerde = document.querySelectorAll('#conjuntoVerde .header-container-2');
+          contenedoresVerde.forEach(function(contenedor) {
+            contenedor.classList.add('active');
+          });
+          verdeActivo = true;
+
+          // Ocultar conjunto azul si está activo
+          if (azulActivo) {
+            conjuntoAzul.style.display = 'none';
+            var contenedoresAzul = document.querySelectorAll('#conjuntoAzul .header-container-2');
+            contenedoresAzul.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            azulActivo = false;
+          }
+          // Ocultar conjunto morado si está activo
+          if (moradoActivo) {
+            conjuntoMorado.style.display = 'none';
+            var contenedoresMorado = document.querySelectorAll('#conjuntoMorado .header-container-2');
+            contenedoresMorado.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            moradoActivo = false;
+          }
+          // Ocultar conjunto rojo si está activo
+          if (rojoActivo) {
+            conjuntoRojo.style.display = 'none';
+            var contenedoresRojo = document.querySelectorAll('#conjuntoRojo .header-container-2');
+            contenedoresRojo.forEach(function(contenedor) {
+              contenedor.classList.remove('active');
+            });
+            rojoActivo = false;
+          }
+        } else {
+          // Cerrar conjunto verde
+          var contenedoresVerde = document.querySelectorAll('#conjuntoVerde .header-container-2');
+          contenedoresVerde.forEach(function(contenedor) {
+            contenedor.classList.remove('active');
+          });
+          setTimeout(function() {
+            conjuntoVerde.style.display = 'none';
+          }, 300); // Esperar a que termine la transición
+          verdeActivo = false;
+        }
+      }
+    }
+        </script>
+        <!-- NOSOTROS -->
+        <script>
+            // Selecciona el contenedor principal con la clase .cont
+var $cont = document.querySelector('.cont');
+
+// Convierte la NodeList de elementos con clase .el en un array utilizando [].slice.call
+var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+
+// Convierte la NodeList de botones de cierre con clase .el__close-btn en un array
+var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+
+// Retrasa la eliminación de la clase .s--inactive del contenedor principal $cont después de 200 milisegundos
+setTimeout(function() {
+  $cont.classList.remove('s--inactive');
+}, 200);
+
+// Itera sobre cada elemento .el en $elsArr y agrega un event listener para 'click'
+$elsArr.forEach(function($el) {
+  $el.addEventListener('click', function() {
+    // Si el elemento ya tiene la clase .s--active, no hagas nada y devuelve
+    if (this.classList.contains('s--active')) return;
+    
+    // Agrega la clase .s--el-active al contenedor principal $cont
+    $cont.classList.add('s--el-active');
+    
+    // Agrega la clase .s--active al elemento actual $el
+    this.classList.add('s--active');
+  });
+});
+
+// Itera sobre cada botón de cierre en $closeBtnsArr y agrega un event listener para 'click'
+$closeBtnsArr.forEach(function($btn) {
+  $btn.addEventListener('click', function(e) {
+    // Evita la propagación del evento click
+    e.stopPropagation();
+    
+    // Elimina la clase .s--el-active del contenedor principal $cont
+    $cont.classList.remove('s--el-active');
+    
+    // Encuentra el primer elemento .el con la clase .s--active y remueve la clase .s--active
+    document.querySelector('.el.s--active').classList.remove('s--active');
+  });
+});
+
+        </script>
 </head>
 
 
