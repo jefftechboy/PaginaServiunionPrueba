@@ -7,11 +7,9 @@
         "config": { "maxLambdaSize" : "15mb", "runtime": "python3.9" }
       }
     ],
-    "routes": [
-      {
+    "routes": [{
         "src": "/(.*)",
         "dest": "MockUpPagina/wsgi.py"
-      }
-    ]
+      }]
   }
   

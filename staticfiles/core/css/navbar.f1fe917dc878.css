@@ -1,0 +1,246 @@
+.fila-principal{
+    padding-bottom: 6px;
+}
+.contenedor-navbar{
+    background: linear-gradient(90deg, rgba(252,146,14,1) 29%, rgba(252,163,11,0.8800770308123249) 55%, rgba(252,192,38,1) 80%, rgba(230,199,20,1) 100%);
+    height: 120px;
+}
+.columna-circulo-grande{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding-top: 10px;
+}
+.circulo-grande-narvbar {
+    width: 100px; /* Ancho del contenedor */
+    height: 100px; /* Alto del contenedor */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    background-color: white; /* Color de fondo del círculo */
+    display: flex; /* Utiliza flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.circulo-grande-narvbar img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: contain; /* Ajusta el tamaño de la imagen manteniendo la proporción */
+}
+.circulo-pequeño-narvbar{
+    height: 44px;
+    width: 100%;
+    border-radius: 50%;
+    justify-content: flex-start;
+}
+.titulo-grande{
+    text-align: left;
+    padding-top: 16px;
+    padding-left: 5px;
+}
+.titulo-link-inicio{
+    text-decoration: none;
+    color: white;
+}
+.titulo-link-inicio:hover{
+    text-decoration: none;
+    color: white;
+}
+.bloques-narvbar-derecha{
+    margin-top: 20px;
+    height: 70px;
+    width: 230px;
+    background-color:  #004aad;
+    border-radius: 50px;
+    margin-left: 0px;
+}
+.solicitar-credencial-texto{
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.titulo-pequeño{
+    padding-top: 10px;
+    padding-right: 80px;
+}
+
+
+.columna-link{
+    padding-top: 12px;
+}
+.boton-links{
+    font-weight: bold;
+    border-color: transparent;
+    border-radius: 30px;
+    height: 35px;
+    width: 100px;
+    padding-bottom: 4px;
+    font-size: 18px;
+    background-color: transparent;
+    border-color: transparent;
+    padding-bottom: 10px;
+    margin-top: 12px;
+    color: rgb(14, 14, 138);
+    text-decoration: none;
+}
+.link{
+    text-decoration: none;
+}
+.boton-links:hover{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    height: 35px;
+    width: 130px;
+    background-color: rgb(14, 14, 138);
+    color: white; 
+}
+.boton-links-reserva{
+    border-color: transparent;
+    font-weight: bold;
+    height: 35px;
+    width: 150px;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: green;
+    border-color: transparent;
+    padding-bottom: 10px;
+    margin-top: 12px;
+    color: rgb(255, 255, 255);
+}
+.boton-links-reserva:hover{
+    font-weight: bold;
+    border-color: green;
+    text-decoration: none;
+    border-radius: 30px;
+    height: 35px;
+    width: 150px;
+    background-color: transparent;
+    color: green;
+}
+.boton-links-medios{
+    border-color: transparent;
+    font-weight: bold;
+    height: 35px;
+    width: 150px;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: transparent;
+    border-color: transparent;
+    padding-bottom: 10px;
+    margin-top: 12px;
+    color: rgb(14, 14, 138);
+}
+.boton-links-medios:hover{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    height: 35px;
+    width: 150px;
+    background-color:rgb(14, 14, 138);
+ 
+}
+.boton-links-reserva-btn{
+    padding-left: 50px;
+}
+.boton-links-drop-down{
+    font-weight: bold;
+    border-color: transparent;
+    border-radius: 30px;
+    height: 35px;
+    color: rgb(0, 0, 0);
+    width: 120px;
+    font-size: 18px;
+    border-color: transparent;
+    padding-bottom: 10px;
+    margin-top: 12px;
+}
+.boton-links-drop-down:hover{
+    font-weight: bold;
+    background-color:rgb(14, 14, 138);
+    color: rgb(255, 255, 255); 
+    
+}
+.dropdown-toggle::after {
+    display: none;  /* Ocultar el pseudo-elemento que genera la flecha */
+}
+.boton-links-drop-down {
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
+  }
+.boton-links-drop-down{
+color: white;
+}
+.link-reclamos{
+    text-decoration: none;
+}
+.link-reclamos:hover{
+    text-decoration: none;
+}
+.boton-casa{
+    margin-top: 12px;
+    height: 40px;
+    margin-right: 1px;
+}
+.link-inicio{
+    text-decoration: none;
+    color: white;
+}
+.link-inicio:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    width: 150px;
+    color:rgb(14, 14, 138);
+}
+
+.dropdown-toggle.active, .dropdown-toggle[aria-expanded="true"] {
+    background-color:rgb(14, 14, 138);
+    color: white;
+}
+.fila-texto-servicios{
+    padding-top: 30px;
+}
+.dropdown-toggle:focus {
+    background-color: rgb(14, 14, 138) !important; /* Cambia el color de fondo del botón al hacer clic */
+    border-color: transparent !important; /* Opcional: cambia el color del borde */
+}
+.dropdown-menu {
+    background-color: white; /* Cambia el color de fondo del menú desplegable */
+}
+/*
+.contenedor-fondo-naranjo{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+*/
+.circulo-pequeño-narvbar-links{
+    height: 70px;
+    width: 70px;
+    background-color: orange;
+    border-radius: 50%;
+    margin-top: 7px;
+}
+.fila-links {
+    height: 82px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    z-index: 1000;
+    position: fixed;
+    top: 120px; /* Inicialmente fuera de la vista */
+    transition: top 0 ease; /* Transición suave para el cambio de top */
+}

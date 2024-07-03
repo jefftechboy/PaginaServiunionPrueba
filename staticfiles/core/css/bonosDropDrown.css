@@ -1,0 +1,12 @@
+.dropdown-menu .dropdown-menu {
+    left: 100%;
+    top: 0;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+.navbar-nav .dropdown-toggle::after {
+    display: none;
+}
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}

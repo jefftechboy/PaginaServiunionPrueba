@@ -1,0 +1,98 @@
+.contenedor-evaluacion-gratuita{
+    width: 1050px;
+    height: 250px;
+    background-color: #004aad;
+    margin-bottom: 30px;
+    margin-right: 0%;
+    padding-right: 0%;
+    margin-top: 25px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.contenedor-evaluacion-gratuita-foto{
+    width: 330px;
+    height: 330px;
+    background-color: aqua;
+    margin-bottom: 30px;
+    margin-left: 0%;
+    padding-bottom: 40px;
+    border-radius: 40px;
+}
+.columna-texto-evaluacion{
+    margin: 0%;
+    padding: 0%;
+}
+.columna-foto-evaluacion{
+    margin: 0%;
+    padding: 0%;
+}
+.columna-texto-evaluacion{
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+.boton-precio-sesion{
+    width: 400px;
+    margin-top: 30px;
+    height: 80px;
+    border-color: transparent;
+    border-radius: 60px;
+    background-color: rgb(161, 206, 206);
+}
+.boton-precio-sesion h4{
+    color: white;
+}
+.boton-gratuito-texto{
+    width: 400px;
+    height: 80px;
+    border-color: transparent;
+    border-radius: 60px;
+    margin-top: 10px;
+}
+.texto-grauito{
+    font-size: 60px;
+    color: rgb(78, 168, 168);
+}
+.boton-reserva-aca-texto{
+    width: 290px;
+    height: 45px;
+    border-color: transparent;
+    border-radius: 60px;
+    margin-top: 25px;
+    background-color: #004aad;
+}
+.texto-reserva-aca{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+.boton-gratuito-oferta{
+    width: 400px;
+    height: 120px;
+    border-color: transparent;
+    border-radius: 60px;
+    margin-top: 10px;
+    background-color: rgb(63, 168, 37);
+}
+.h1,h2,h3,h4,h5{
+    color: white;
+    text-align: center;
+}
+.contenedor-texto-oferta{
+    text-align: center;
+    padding-left: 25%;
+}
+.texto-oferta{
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+}
+.text-sesiones-oferta{
+    text-align: center;
+    line-height: 0.5;
+    padding-left: 50px;
+}
+.texto-precio-oferta{
+    font-size: 30px;
+    padding-left: 50px;
+    text-align: center;
+}

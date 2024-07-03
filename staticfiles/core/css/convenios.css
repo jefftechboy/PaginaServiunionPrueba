@@ -1,0 +1,81 @@
+.container-wrapper {
+    display: none; /* Ocultar contenedores al inicio */
+  }
+  
+  .blue-container, .purple-container {
+    width: 0; /* Ancho inicial cero para ocultar */
+    height: 100px; /* Altura fija de los contenedores */
+    transition: width 0.3s ease, height 0.3s ease; /* Transición suave de anchura y altura */
+    background-size: 200px;
+    overflow: hidden; /* Ocultar contenido que desborde */
+  }
+
+  .blue-container.active, .purple-container.active {
+    width: 200px; /* Ancho al expandirse */
+    height: 200px; /* Altura al expandirse */
+  }
+
+  .card-header {
+    padding: 0;
+    height: 50px; /* Altura del header */
+  }
+
+  .header-container {
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+  }
+
+  .header-container-2 {
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+  }
+
+  .card {
+    margin-left: 80px;
+  }
+
+  .btn-circulo-carusel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 28%;
+    transform: translateY(-50%);
+  }
+
+  /* Estilo adicional para centrar el texto */
+  .centered {
+    text-align: center;
+    margin-top: 40px; /* Margen superior para mostrar animación desde 20px */
+  }
+
+  /* Estilo para los botones */
+  .button-wrapper {
+    display: flex; /* Usar flexbox para alinear botones */
+    justify-content: center; /* Centrar botones horizontalmente */
+    margin-bottom: 10px; /* Espacio inferior para separar los botones de los contenedores */
+  }
+
+  button {
+    margin: 0 10px; /* Margen entre los botones */
+  }
+.boton-convenios{
+background-color: #004aad;
+border-color: transparent;
+border-radius: 20px;
+height: 50px;
+width: 150px;
+font-size: 20px;
+}
+
+.boton-convenios:hover,
+.boton-convenios:active,
+.boton-convenios:focus:hover{
+    outline: none;
+}
