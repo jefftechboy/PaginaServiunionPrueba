@@ -31,7 +31,16 @@
     display: flex;
     justify-content: right;
     align-items: right;
-    padding-top: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.imagen-logo-principal{
+  margin-right: 8px;
+  margin-top: 8px;
 }
 .circulo-grande-narvbar {
     width: 100px; /* Ancho del contenedor */
@@ -71,14 +80,14 @@
 .bloques-narvbar-derecha{
     margin-top: 20px;
     height: 70px;
-    width: 230px;
+    width: 200px;
     background-color:  #004aad;
     border-radius: 50px;
     margin-left: 0px;
 }
 .solicitar-credencial-texto{
     padding-top: 20px;
-    padding-left: 30px;
+    padding-left: 15px;
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -1736,7 +1745,12 @@ font-size: 20px;
         <div class="container-fluid contenedor-navbar">
             <!-- FILA ARRIBA-->
             <div class="row fila-principal">
-                <div class="col-1 columna-circulo-grande"></div>
+                <div class="col-1">
+                  <div class="container columna-circulo-grande">
+                    <img src="https://raw.githubusercontent.com/jefftechboy/PaginaServiunionPrueba/main/core/static/core/img/logos_100/logo_normal.png" 
+                      class="imagen-logo-principal" style="width: 80%;height: 80%;">
+                  </div>
+                </div>
                 <div class="col-3">
                     <div class="row">
                         <div class="col-12">
@@ -1759,15 +1773,13 @@ font-size: 20px;
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="https://raw.githubusercontent.com/jefftechboy/PaginaServiunionPrueba/main/core/static/core/img/LogoPrincipal.jpg"
-                    width="50%" height="100px" style="padding-bottom: 0px;margin-right: 0px;margin-top: 10px;margin-left: 90px;" ></div>
+                <div class="col-4"></div>
                 <div class="col-4 container-bloques-narbar">
                     <div class="container">
                         <div class="row">
                             <div class="col-6">
                                 <a href="https://unioncoop.cl/hagase-socio-nuevo/" target="_blank">
-                                    <div class="container bloques-narvbar-derecha">
+                                    <div class="container container bloques-narvbar-derecha">
                                         <p class="solicitar-credencial-texto">CREDENCIAL</p>
                                     </div>
                                 </a>
